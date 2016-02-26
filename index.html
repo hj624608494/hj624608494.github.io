@@ -1,68 +1,42 @@
 ---
-title: Alpha2
-layout: default
+layout: page
+description: "一生想做浪漫极客"
 ---
-<section class="box special">
-	<header class="major">
-		<h2>Introducing the ultimate mobile app10
-		<br />
-		for doing stuff with your phone</h2>
-		<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-		adipiscing nunc adipiscing. Condimentum turpis massa.</p>
-	</header>
-	<span class="image featured"><img src="{{ site.baseurl }}/assets/images/pic01.jpg" alt="" /></span>
-</section>
 
-<section class="box special features">
-	<div class="features-row">
-		<section>
-			<span class="icon major fa-bolt accent2"></span>
-			<h3>Magna etiam</h3>
-			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-		</section>
-		<section>
-			<span class="icon major fa-area-chart accent3"></span>
-			<h3>Ipsum dolor</h3>
-			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-		</section>
-	</div>
-	<div class="features-row">
-		<section>
-			<span class="icon major fa-cloud accent4"></span>
-			<h3>Sed feugiat</h3>
-			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-		</section>
-		<section>
-			<span class="icon major fa-lock accent5"></span>
-			<h3>Enim phasellus</h3>
-			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-		</section>
-	</div>
-</section>
-
-<div class="row">
-	<div class="6u">
-
-		<section class="box special">
-			<span class="image featured"><img src="{{ site.baseurl }}/assets/images/pic02.jpg" alt="" /></span>
-			<h3>Sed lorem adipiscing</h3>
-			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-			<ul class="actions">
-				<li><a href="#" class="button alt">Learn More</a></li>
-			</ul>
-		</section>
-
-	</div>
-	<div class="6u">
-
-		<section class="box special">
-			<span class="image featured"><img src="{{ site.baseurl }}/assets/images/pic03.jpg" alt="" /></span>
-			<h3>Accumsan integer</h3>
-			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-			<ul class="actions">
-				<li><a href="#" class="button alt">Learn More</a></li>
-			</ul>
-		</section>
-
-	</div>
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {{ post.content | strip_html | truncate:200 }}
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
 </div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
