@@ -1,15 +1,15 @@
 ---
 layout:     post
-title:      "JavaScript事件代理和委托-Delegation"
-subtitle:   "JavaScript事件代理和委托"
-date:       2016-02-26 12:00:00
-author:     "Hj"
-header-img: "img/post-bg-js-version.jpg"
+title:      "React vs Angular 2：冰与火之歌「译」"
+subtitle:   "React versus Angular 2: There Will Be Blood"
+date:       2016-02-01 12:00:00
+author:     "hj"
+header-img: "img/post-bg-re-vs-ng2.jpg"
 header-mask: 0.3
 tags:
+    - 前端开发
     - JavaScript
-    - js事件代理
-    - js事件冒泡
+    - 译文
 ---
 
 ## 目录
