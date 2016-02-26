@@ -26,16 +26,6 @@ tags:
 首先介绍一下JavaScript的事件代理。事件代理在JS世界中一个非常有用也很有趣的功能。当我们需要对很多元素添加事件的时候，可以通过将事件添加到它们的父节点而将事件委托给父节点来触发处理函数。这主要得益于浏览器的事件冒泡机制，后面会详细介绍。下面我们具体举个例子来解释如何使用这个特性。这个例子主要取自David Walsh的相关文章（How JavaScript Event Delegation Works）。
 
 假设有一个 UL 的父节点，包含了很多个 Li 的子节点：
-```html
-<ul id="parent-list">
-  <li id="post-1">Item 1</li>
-  <li id="post-2">Item 2</li>
-  <li id="post-3">Item 3</li>
-  <li id="post-4">Item 4</li>
-  <li id="post-5">Item 5</li>
-  <li id="post-6">Item 6</li>
-</ul>
-```
 
 ```html
 <ul>
