@@ -2,7 +2,7 @@
 layout:     post
 title:      "JavaScript事件代理和委托"
 subtitle:   "JavaScript事件代理和委托"
-date:       2016-02- 12:00:00
+date:       2016-02-26 12:00:00
 author:     "hj"
 header-img: "img/post-bg-re-vs-ng2.jpg"
 header-mask: 0.3
