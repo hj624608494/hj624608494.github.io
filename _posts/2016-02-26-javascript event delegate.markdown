@@ -1,11 +1,11 @@
 ---
 layout:     post
 title:      "JavaScript事件代理和委托（Delegation）"
-subtitle:   "JavaScript事件代理和委托（Delegation）"
+subtitle:   "JavaScript事件代理和委托"
 date:       2016-02-26 12:00:00
 author:     "hj"
 header-img: "img/post-bg-js-version.jpg"
-header-mask: 0.3
+header-mask: 0.4
 tags:
     - JavaScript
     - js事件代理
