@@ -1,15 +1,12 @@
 ---
 layout:     post
-title:      "JavaScript事件代理和委托"
-subtitle:   "JavaScript事件代理和委托"
-date:       2016-02-26 12:00:00
-author:     "hj"
-header-img: "img/post-bg-re-vs-ng2.jpg"
-header-mask: 0.3
+title:      "Hello 2015"
+subtitle:   "Hello World, Hello Blog"
+date:       2015-01-29 12:00:00
+author:     "Hux"
+header-img: "img/post-bg-2015.jpg"
 tags:
-    - 前端开发
-    - JavaScript
-    - 译文
+    - Life
 ---
 
 ## 目录
