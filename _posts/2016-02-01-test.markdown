@@ -13,3 +13,8 @@ tags:
 ---
 
 ## 目录
+- 1.JavaScript事件代理
+- 2.事件冒泡及捕获
+- 3.jQuery中delegate函数
+- 4.优点
+- 5.在JavaScript编程中使用代理
