@@ -1,15 +1,13 @@
 ---
-layout:     post
-title:      "JavaScript事件代理和委托-Delegation"
-subtitle:   "JavaScript事件代理和委托"
-date:       2016-02-26 12:00:00
-author:     "Hj"
-header-img: "img/post-bg-js-version.jpg"
-header-mask: 0.4
+layout:     keynote
+title:      "都 2015 年了，CSS 怎么还是这么糟糕"
+subtitle:   "Keynote: CSS Still Sucks 2015"
+iframe:     "http://huangxuan.me/css-sucks-2015/"
+date:       2015-12-28
+author:     "Hux"
 tags:
-    - JavaScript
-    - js事件代理
-    - js事件冒泡
+    - 前端开发
+    - CSS
 ---
 
 ## 目录
