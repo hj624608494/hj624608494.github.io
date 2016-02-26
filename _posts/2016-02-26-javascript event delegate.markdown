@@ -12,7 +12,7 @@ tags:
     - js事件捕捉 目标 冒泡
 ---
 
-##目录
+## 目录
 - 1.JavaScript事件代理
 - 2.事件冒泡及捕获
 - 3.jQuery中delegate函数
