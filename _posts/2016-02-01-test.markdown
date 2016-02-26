@@ -36,3 +36,11 @@ tags:
   <li id="post-6">Item 6</li>
 </ul>
 ```
+
+```html
+<ul>
+  <li *ngFor="#hero of heroes">
+    {{hero.name}}
+  </li>
+</ul>
+```
