@@ -1,6 +1,6 @@
 # Site settings
 title: Hj Blog
-SEOTitle: 韩杰的博客 | Hux Blog
+SEOTitle: 韩杰的博客 | Hj Blog
 header-img: img/home-bg.jpg
 email: 624608494@qq.com
 description: "关于前端与设计韩杰 的个人博客，与你一起发现更大的世界。"
@@ -81,8 +81,8 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 # Friends
 friends: [
-    {
-        title: "",
-        href: ""
-    }
+    # {
+    #     title: "",
+    #     href: ""
+    # }
 ]
