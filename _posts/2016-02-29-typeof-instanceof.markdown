@@ -2,7 +2,7 @@
 layout:     post
 title:      "typeof 和 instanceof 判断变量类型"
 subtitle:   "typeof 和 instanceof 判断变量类型"
-date:       2016-02-29 12:00:00
+date:       2016-02-28 16:00:00
 author:     "hj"
 header-img: "img/post-bg-2015.jpg"
 tags:
