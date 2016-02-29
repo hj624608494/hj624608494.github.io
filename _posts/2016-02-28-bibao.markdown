@@ -18,18 +18,18 @@ tags:
 * 3.被内部函数引用到的参数及变量不会被内存释放
 
 ```javascript
-	function aaa(){
-		var a = 1;
+    function aaa(){
+        var a = 1;
 
-		function bbb(){
-			a++;
-			alert(a);
-		}
-		return bbb;
-	}
-	var c = aaa();
-	c();	//2
-	c();	//3
+        function bbb(){
+            a++;
+            alert(a);
+        }
+        return bbb;
+    }
+    var c = aaa();
+    c();    //2
+    c();    //3
 ```
 
 ## 二.闭包的好处
@@ -38,104 +38,104 @@ tags:
 * 3.实现模块化的js代码模式
 
 ```javascript
-	//声明全局变量b
-	var b = 1;
-	function bbb(){
-		return function(){
-			b++;
-			alert(b);
-		}
-	}
-	var d = bbb();
-	d();	//2
-	d();	//3
-	b;		//3
+    //声明全局变量b
+    var b = 1;
+    function bbb(){
+        return function(){
+            b++;
+            alert(b);
+        }
+    }
+    var d = bbb();
+    d();    //2
+    d();    //3
+    b;      //3
 
-	//避免全局变量的污染
-	function aaa(){
-		var a = 1;
+    //避免全局变量的污染
+    function aaa(){
+        var a = 1;
 
-		return function(){
-			a++;
-			alert(a);
-		}
-	}
-	var c = aaa();
-	c();	//2
-	c();	//3
-	a;		//Uncaught ReferenceError: a is not defined
+        return function(){
+            a++;
+            alert(a);
+        }
+    }
+    var c = aaa();
+    c();    //2
+    c();    //3
+    a;      //Uncaught ReferenceError: a is not defined
 ```
 
 ```javascript
-	//实现js代码模块化
-	var util = (function(){
-		//内部变量
-		var num = 0;
+    //实现js代码模块化
+    var util = (function(){
+        //内部变量
+        var num = 0;
 
-		//add
-		function add(v){
-			v = v ? v : 1;
-			num += v;
-		}
+        //add
+        function add(v){
+            v = v ? v : 1;
+            num += v;
+        }
 
-		//subtract
-		function subtract(v){
-			v = v ? v : 1;
-			num -= v;
-		}
+        //subtract
+        function subtract(v){
+            v = v ? v : 1;
+            num -= v;
+        }
 
-		//get
-		function get(){
-			alert(num);
-		}
+        //get
+        function get(){
+            alert(num);
+        }
 
-		return{
-			add : add,
-			subtract: subtract,
-			get : get
-		}
-	})();
-	util.add(1);	//1
-	util.add(2);	//3
-	util.get();		//3
-	util.subtract(1);	//2
-	util.get();	//2
+        return{
+            add : add,
+            subtract: subtract,
+            get : get
+        }
+    })();
+    util.add(1);    //1
+    util.add(2);    //3
+    util.get();     //3
+    util.subtract(1);   //2
+    util.get(); //2
 ```
 
 ## 三.闭包需要注意的地方
 * 1.IE下容易引发内存泄露（内存泄露会引起不必要的资源占用，以至于跳转到其他页面还占用着其内存空间，只有关闭浏览器时才会被释放）
 
 ```html
-	<div id="div1"></div>
+    <div id="div1"></div>
 ```
 
 ```javascript
-	//ie 下引发的内存泄露问题
-	window.onload = function(){
-		var oDiv = document.getElementById('div1');
+    //ie 下引发的内存泄露问题
+    window.onload = function(){
+        var oDiv = document.getElementById('div1');
 
-		//js 对象的属性的函数里 去引用外部对象的属性，就会引发ie 下的内存泄露
-		oDiv.onclick = function(){
-			alert(oDiv.id);
-		}
-	}
+        //js 对象的属性的函数里 去引用外部对象的属性，就会引发ie 下的内存泄露
+        oDiv.onclick = function(){
+            alert(oDiv.id);
+        }
+    }
 ```
 
 
 ```javascript
-	//内存泄露的解决办法
-	window.onload = function(){
-		var oDiv = document.getElementById('div1');
-		var id = oDiv.id;
+    //内存泄露的解决办法
+    window.onload = function(){
+        var oDiv = document.getElementById('div1');
+        var id = oDiv.id;
 
-		oDiv.onclick = function(){
-			alert(id);
-		}
+        oDiv.onclick = function(){
+            alert(id);
+        }
 
-		//卸载网页事件 （当关闭当前的标签页或者跳转到其他页面时触发）
-		window.onunload = function(){
-			oDiv.onclick = null;
-		}
-	}
+        //卸载网页事件 （当关闭当前的标签页或者跳转到其他页面时触发）
+        window.onunload = function(){
+            oDiv.onclick = null;
+        }
+    }
 ```
 
