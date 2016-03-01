@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "JavaScript基础知识总结"
+subtitle:   "JavaScript基础知识总结"
+date:       2016-02-29 16:00:00
+author:     "hj"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - 数据类型
+    - 面向对象
+    - 闭包
+---
+
 ## JS基本类型有什么? 引用类型(对象类型)有什么?
 * 基本类型: number, string, boolean, undefined, null
 * 引用类型: object, array, function, date等等
