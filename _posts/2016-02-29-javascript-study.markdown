@@ -177,7 +177,7 @@ ev.stopPropagation();
 
 4.什么是闭包（closure），为什么要用？
 
-![闭包的理解](http://hj624608494.github.io/2016/02/28/bibao/)
+[闭包的理解](http://hj624608494.github.io/2016/02/28/bibao/)
 
 5.如何判断一个对象是否属于某个类？
 
@@ -186,7 +186,7 @@ ev.stopPropagation();
        alert('yes');
    }
 ```
-![更多内容](http://hj624608494.github.io/2016/02/28/typeof-instanceof/)
+[更多内容](http://hj624608494.github.io/2016/02/28/typeof-instanceof/)
 
 6.new操作符具体干了什么呢?
 
@@ -232,18 +232,17 @@ defer和async、动态创建DOM方式（用得最多）、按需异步载入js
 
 ```javascript
     var module1 = (function(){
-　　　　var _count = 0;
-　　　　var m1 = function(){
-　　　　　　//...
-　　　　};
-　　　　var m2 = function(){
-　　　　　　//...
-　　　　};
-　　　　return {
-　　　　　　m1 : m1,
-　　　　　　m2 : m2
-　　　　};
-　　})();
+        var _count = 0;
+        var m1 = function(){
+        
+        };
+        var m2 = function(){
+        };
+        return {
+            m1 : m1,
+            m2 : m2
+        };
+    })();
 ```
 
 11.对Node的优点和缺点提出了自己的看法：
