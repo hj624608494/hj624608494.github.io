@@ -31,6 +31,7 @@ jspm是类似于npm的包管理器.
 ## 3.jspm安装包 jspm install
 
 以jquery为例:
+
 > jspm install jquery = github:components/jquery@^2.1.4
 
 jquery(重命名) = github(包来源):components/jquery(包地址)@^2.1.4(版本号)
