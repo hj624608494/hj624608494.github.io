@@ -1,0 +1,45 @@
+---
+layout:     post
+title:      "jspm使用小记"
+subtitle:   "jspm使用小记"
+date:       2016-03-01 16:00:00
+author:     "hj"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - jspm
+    - npm
+    - 包管理器
+---
+
+## 1.jspm是什么?
+jspm是类似于npm的包管理器.
+
+## 2.jspm安装.
+
+> npm install jspm -g
+
+> mkdir myapp
+
+> cd myapp
+
+> npm init
+
+> npm install --save -dev
+
+> jspm init
+
+## 3.jspm安装包 jspm install
+
+以jquery为例:
+> jspm install jquery = github:components/jquery@^2.1.4
+
+jquery(重命名) = github(包来源):components/jquery(包地址)@^2.1.4(版本号)
+
+## 4.jspm卸载包 jspm uninstall
+
+> jspm uninstall jquery
+
+## 5.jspm打包 bundle
+
+> jspm bundle myapp/main myapp/build.js 
+
