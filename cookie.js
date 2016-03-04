@@ -18,4 +18,4 @@ function getCookie(key){
 	else
 	return null;
 }
-getCookie('name');
+alert(getCookie('name'));
