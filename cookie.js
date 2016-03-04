@@ -1,6 +1,7 @@
 function alertMsg(msg){
 	alert(msg);
 }
+alertMsg('111111111111')
 
 function setCookie(data){
 	document.cookie = data.key + "=" + data.val;
