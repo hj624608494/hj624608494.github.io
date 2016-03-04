@@ -5,6 +5,11 @@ function alertMsg(msg){
 function setCookie(data){
 	document.cookie = data.key + "=" + data.val;
 }
+var data = {
+	'key':'cookietest',
+	'val' : 'test'
+}
+setCookie(data);
 
 function getCookie(key){
 	var arr,reg=new RegExp("(^| )"+key+"=([^;]*)(;|$)");
