@@ -15,9 +15,9 @@
 <script type="text/javascript">
 	window.addEventListener('message',function(e){
         if(e.source!=window.parent) return;
-        var color= '#333';
+        // var color = '#333';
+        var color = localStorage.getItem('name');
         window.parent.postMessage(color,'*');
-        console.log(e);
     },false);
 
 </script>
