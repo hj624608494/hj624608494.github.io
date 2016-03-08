@@ -11,11 +11,11 @@
     <div>
         <iframe id="child" src="http://hj624608494.github.io/post.html"></iframe>
     </div>
-    
+
 <script type="text/javascript">
 	window.addEventListener('message',function(e){
         if(e.source!=window.parent) return;
-        var color=container.style.backgroundColor;
+        var color= '#333';
         window.parent.postMessage(color,'*');
         console.log(e);
     },false);
