@@ -17,6 +17,7 @@
         if(e.source!=window.parent) return;
         // var color = '#333';
         var color = localStorage.getItem('name');
+        debugger;
         window.parent.postMessage(color,'*');
     },false);
 
