@@ -5,18 +5,14 @@
 </head>
 <body>
 
-	<div style="width:200px; float:left; margin-right:200px;border:solid 1px #333;">
-        <div id="color">Frame Color</div>
-    </div>
-    <div>
-        <iframe id="child" src="http://hj624608494.github.io/post.html"></iframe>
-    </div>
+	<div id="name">sdsdasdasd</div>
 
 <script type="text/javascript">
 	window.addEventListener('message',function(e){
         if(e.source!=window.parent) return;
         // var color = '#333';
-        var color = localStorage.getItem('name');
+        // var color = localStorage.getItem('name');
+        var color = document.getElementById('name').innerHTML;
         debugger;
         window.parent.postMessage(color,'*');
     },false);
