@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "了解浏览器如何工作—渲染引擎"
-subtitle:   "了解浏览器如何工作—渲染引擎"
-date:       2016-03-16 12:00:00
+title:      "1.了解浏览器如何工作—渲染引擎"
+subtitle:   "1.了解浏览器如何工作—渲染引擎"
+date:       2016-03-14 12:00:00
 author:     "hj"
 header-img: "img/post-bg-2015.jpg"
 tags:

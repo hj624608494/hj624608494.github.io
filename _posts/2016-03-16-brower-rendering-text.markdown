@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "浏览器如何渲染文本"
-subtitle:   "浏览器如何渲染文本"
-date:       2016-03-16 12:00:00
+title:      "2.浏览器如何渲染文本"
+subtitle:   "2.浏览器如何渲染文本"
+date:       2016-03-15 12:00:00
 author:     "hj"
 header-img: "img/post-bg-2015.jpg"
 tags:

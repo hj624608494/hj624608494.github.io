@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "浏览器加载和渲染html的顺序"
-subtitle:   "浏览器加载和渲染html的顺序"
+title:      "3.浏览器加载和渲染html的顺序"
+subtitle:   "3.浏览器加载和渲染html的顺序"
 date:       2016-03-16 12:00:00
 author:     "hj"
 header-img: "img/post-bg-2015.jpg"
