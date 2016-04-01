@@ -12,6 +12,7 @@ tags:
 ---
 
 #### js中的对象继承
+
 > js原型（prototype）实现继承
 
 ```javascript
