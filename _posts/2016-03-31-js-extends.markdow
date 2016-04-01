@@ -1,0 +1,52 @@
+---
+layout:     post
+title:      "js中的对象继承"
+subtitle:   "js中的对象继承"
+date:       2016-03-31 13:00:00
+author:     "hj"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - 原型
+    - 继承
+    - call
+---
+
+#### js中的对象继承
+> js原型（prototype）实现继承
+
+```javascript
+//被继承对象（函数／类）
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+
+    this.getAge = function(){
+        return this.age;
+    }
+}
+//给Person对象的原型对象上添加一个getName的函数（方法）
+Person.prototype.getName = function(){
+    return this.name;
+}
+
+//继承者对象（函数／类）
+function Programmer(){}
+//继承者的原型对象 ＝ 被继承者的一个实例
+Programmer.prototype = new Person('hanjie', '25');
+//实例一个Programmer
+var yuan = new Programmer();
+//调用继承Person的方法
+yuan.getName();
+yuan.getAge();
+```
+
+new操作符具体干了什么呢?其实很简单，就干了三件事情。
+
+```javascript
+//我们创建一个空对象
+var Programmer.prototype  = {};
+//我们将这个空对象的__proto__成员指向了Person函数对象prototype成员对象
+Programmer.prototype.__proto__ = Person.prototype;
+//我们将Person函数对象的this指针替换成Programmer.prototype，然后再调用Person函数
+Person.call(Programmer.prototype);
+```
