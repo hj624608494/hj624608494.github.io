@@ -1,0 +1,87 @@
+---
+layout:     post
+title:      "JS中声明提前"
+subtitle:   "JS中声明提前"
+date:       2016-04-14 13:00:00
+author:     "hj"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - 声明提前
+    - 函数表达式
+    - 函数声明
+---
+
+### JS中声明提前
+* 变量声明提前
+* 函数声明提前
+
+#### 变量声明提前
+
+> JavaScript 中是允许在函数的任意地方写任意多个var语句的，其实相当于在函数体顶部声明变量，这种现象被称为“变量提前”，当你在声明之前使用这个变量时，可能会造成逻辑错误。对于JavaScript来说，一旦在某个作用域（同一个函数内）里声明了一个变量，这个变量在整个作用域内都是存在的，包括在var声明语句之前。看一下这个例子：
+
+```javascript
+var global = 'global';  // 声明一个全局变量 global
+
+function func(){
+    console.log(global);
+    var global = 'global1';
+    console.log(global);
+}
+func();
+//result:
+// undefined
+// global1
+```
+
+为什么函数里面的第一个console.log(global);输出为undefined呢？因为上述的函数体里面的 var 声明变量提前， 那为什么会是undefined呢？不应该是global1吗？因为 var 变量会在函数体的顶部声明，但是其变量的赋值还是在 var 代码书写的位置去执行的。上面的代码其实是这样执行的，看下面代码：
+
+```javascript
+var global = 'global';  // 声明一个全局变量 global
+
+function func(){
+    var global; //声明提前 值为 undefined
+    console.log(global);
+    global = 'global1'; // 为局部变量global赋值
+    console.log(global);
+}
+func();
+//result:
+// undefined
+// global1
+```
+
+#### 函数声明提前
+
+> javascript 提供了两种常用创建函数的方式，一种是函数表达式( var func = function(){/**/} )，另外一种是函数声明的方式( function func(){/**/} )这两者有什么不同呢？先看一段代码：
+
+```javascript
+//调用两个函数
+func2();    // func2
+func1();    // 报错：func1 not a function
+
+var func1 = function(){
+    console.log('func1');
+}
+
+function func2(){
+    console.log('func2');
+}
+```
+
+我们可以发现使用函数声明创建的函数是可以在创建代码上面调用并且正确运行的，而使用函数表达式创建的函数在调用时报错了。那javascript解析器是怎么运行这段代码的呢？
+
+```javascript
+//因为代码是这样执行的，所以你懂的，函数声明的方式，会在javascript解析的时候提前在头部运行
+var func1;
+function func2(){
+    console.log('func2');
+}
+
+//调用两个函数
+func2();    // func2
+func1();    // 报错：func1 not a function
+
+func1 = function(){
+    console.log('func1');
+}
+```
